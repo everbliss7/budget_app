@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Budget App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Budget Account<sub>by Blessing Tayedzerwa</sub></h1>
+      </header>
+
+      <div class="metrics">
+        <div class="income">
+          <h3>Income</h3>
+          <h5><span>$</span>000.00</h5>
+        </div>
+        <div class="budget">
+          <h3>Budget</h3>
+          <h5><span>$</span>000.00</h5>
+        </div>
+        <div class="expenses">
+          <h3>Expenses</h3>
+          <h5><span>$</span>000.00</h5>
+        </div>
+        <div class="balance">
+          <h3>Balance</h3>
+          <h5><span>$</span>000.00</h5>
+        </div>
+      </div>
+
+      <div class="expform_data_container">
+        <div class="matrix_exp_container">
+          <div class="matrix_container">
+            <form action="#" class="income">
+              <p>
+                <span>Income</span>
+                <input
+                  type="number"
+                  name="income"
+                  required
+                  placeholder="000.00"
+                />
+                <input type="submit" name="submit" />
+              </p>
+            </form>
+            <form action="#" class="budget">
+              <p>
+                <span>Budget</span>
+                <input
+                  type="number"
+                  name="budget"
+                  required
+                  placeholder="000.00"
+                />
+                <input type="submit" name="submit" />
+              </p>
+            </form>
+            <form action="#" class="expenses">
+              <p>
+                <span>Expenses</span>
+                <input
+                  type="number"
+                  name="expenses"
+                  required
+                  placeholder="000.00"
+                />
+                <input type="submit" name="submit" />
+              </p>
+            </form>
+            <form action="#" class="balance">
+              <p>
+                <span>Balance</span>
+                <input
+                  type="number"
+                  name="balance"
+                  required
+                  placeholder="000.00"
+                />
+                <input type="submit" name="submit" />
+              </p>
+            </form>
+          </div>
+          <div class="exp_container">
+            <form action="#" class="expenses">
+              <p>
+                <input
+                  type="text"
+                  name="expense_type"
+                  id="expense_name"
+                  placeholder="name of exp"
+                  required
+                />
+              </p>
+              <p>
+                <input
+                  type="text"
+                  name="expense_value"
+                  id="expense_value"
+                  placeholder="000.00"
+                  required
+                />
+              </p>
+              <p><input type="submit" name="expense" value="Add Expense" /></p>
+            </form>
+          </div>
+        </div>
+        <div class="rel_exp_container">
+          <div class="expenses_data_container">
+            <table class="expenses_table">
+              <tr>
+                <th>Expenses</th>
+                <th>Amount ($)</th>
+              </tr>
+              <tr>
+                <td>Grocery</td>
+                <td>200.45</td>
+              </tr>
+              <tr>
+                <td>Clothing</td>
+                <td>400.87</td>
+              </tr>
+              <tr>
+                <td>Transport</td>
+                <td>70.00</td>
+              </tr>
+              <tr>
+                <td>Exam Fees</td>
+                <td>9000.00</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

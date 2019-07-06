@@ -1,0 +1,149 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  background-image: url('img/Mountains.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+.container header h1 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 10px;
+}
+.container header h1 sub {
+  font-size: 0.5rem;
+}
+.metrics {
+  height: 150px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  /* flex-direction: row; */
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+.metrics div {
+  height: 100px;
+  padding-top: 25px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: blue;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  align-content: center;
+  align-items: center;
+}
+.expform_data_container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-content: center;
+  align-items: center;
+}
+.matrix_exp_container {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  align-content: center;
+  align-items: center;
+}
+.matrix_container {
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  align-content: center;
+  align-items: center;
+  /* text-align: center; */
+  border: 3px solid blue;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  background-color: blue;
+}
+.matrix_container form p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.matrix_container form p span {
+  color: white;
+  width: 80px !important;
+}
+.matrix_container form p input,
+.exp_container form p input {
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 1.2rem;
+  margin-left: auto;
+}
+.matrix_container form p span {
+  display: inline-block;
+  width: 120px !important;
+}
+.exp_container form p input[type='submit'],
+.matrix_container form input[type='submit'] {
+  background-color: white;
+  color: blue;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.exp_container {
+  margin-top: 30px !important;
+  padding: 5px;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+  border: 3px solid blue;
+  border-radius: 10px;
+  background-color: blue;
+}
+.exp_container form p,
+.matrix_container form p {
+  margin: 10px;
+  padding: 4px;
+}
+.expenses_data_container .expenses_table {
+  background-color: blue;
+  table-layout: fixed;
+}
+th {
+  height: 50px;
+  width: 400px;
+}
+td {
+  border-top: 2px solid blue;
+}
+table {
+  border-collapse: collapse;
+}
+td {
+  text-align: center;
+  padding: 3px;
+}
+.rel_exp_container {
+  position: relative;
+  height: 100%;
+  border: 3px solid blue;
+  background-color: blue;
+  margin-top: -25px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.rel_exp_container .expenses_data_container {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+}
+.expenses_data_container table {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
