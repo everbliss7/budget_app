@@ -16,19 +16,19 @@
       <div class="metrics">
         <div class="income">
           <h3>Income</h3>
-          <h5><span>$</span>000.00</h5>
+          <h5><span>$</span><span id="income">000.00</span></h5>
         </div>
         <div class="budget">
           <h3>Budget</h3>
-          <h5><span>$</span>000.00</h5>
+          <h5><span>$</span><span id="budget">000.00</span></h5>
         </div>
         <div class="expenses">
           <h3>Expenses</h3>
-          <h5><span>$</span>000.00</h5>
+          <h5><span>$</span><span id="expenses">000.00</span></h5>
         </div>
         <div class="balance">
           <h3>Balance</h3>
-          <h5><span>$</span>000.00</h5>
+          <h5><span>$</span><span id="balance">000.00</span></h5>
         </div>
       </div>
 
@@ -39,8 +39,9 @@
               <p>
                 <span>Income</span>
                 <input
-                  type="number"
+                  type="text"
                   name="income"
+                  id="income_input"
                   required
                   placeholder="000.00"
                 />
@@ -51,8 +52,9 @@
               <p>
                 <span>Budget</span>
                 <input
-                  type="number"
+                  type="text"
                   name="budget"
+                  id="budget_input"
                   required
                   placeholder="000.00"
                 />
@@ -63,8 +65,9 @@
               <p>
                 <span>Expenses</span>
                 <input
-                  type="number"
+                  type="text"
                   name="expenses"
+                  id="expenses_input"
                   required
                   placeholder="000.00"
                 />
@@ -75,8 +78,9 @@
               <p>
                 <span>Balance</span>
                 <input
-                  type="number"
+                  type="text"
                   name="balance"
+                  id="balance_input"
                   required
                   placeholder="000.00"
                 />
@@ -85,7 +89,7 @@
             </form>
           </div>
           <div class="exp_container">
-            <form action="#" class="expenses">
+            <form action="#" class="expenses_details">
               <p>
                 <input
                   type="text"

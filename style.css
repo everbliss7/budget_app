@@ -77,6 +77,7 @@ body {
   width: 80px !important;
 }
 .matrix_container form p input,
+button,
 .exp_container form p input {
   border-radius: 5px;
   padding: 4px;
@@ -88,6 +89,7 @@ body {
   width: 120px !important;
 }
 .exp_container form p input[type='submit'],
+button,
 .matrix_container form input[type='submit'] {
   background-color: white;
   color: blue;
