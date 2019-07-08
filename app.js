@@ -16,7 +16,7 @@ let expense_type_el = document.querySelector('#expense_name');
 let expense_value_el = document.querySelector('#expense_value');
 
 //Expenses Table Output
-const expense_table = document.querySelector('.expenses_table');
+const exp_body = document.querySelector('#exp_body');
 
 //Update Matrics
 function updateMatrics() {
@@ -26,7 +26,10 @@ function updateMatrics() {
   budget_el.textContent = account.getBudget();
   return true;
 }
-
+//Convert to Currency format
+function toCurrency(money) {
+  return parseFloat(money).toFixed(2);
+}
 //Budget Account
 class Account {
   constructor() {
@@ -38,7 +41,7 @@ class Account {
   }
   //Expenses
   getExpenses() {
-    return this.expenses;
+    return toCurrency(this.expenses);
   }
   assignExpenses(expenses) {
     this.expenses = expenses;
@@ -52,7 +55,7 @@ class Account {
   }
 
   getBalance() {
-    return this.balance;
+    return toCurrency(this.balance);
   }
 
   //Budget
@@ -61,17 +64,17 @@ class Account {
     updateMatrics();
   }
   getBudget() {
-    return this.budget;
+    return toCurrency(this.budget);
   }
 
   //Income
   assignIncome(new_income) {
-    this.income = new_income;
-    this.balance += this.income;
+    this.income += new_income;
+    this.balance += new_income;
     updateMatrics();
   }
   getIncome() {
-    return this.income;
+    return toCurrency(this.income);
   }
 
   //Expenses List
@@ -86,6 +89,7 @@ class Account {
     this.expenses += expense_value;
     this.expenses_list.push(expensesObj);
     updateMatrics();
+    updateExpensesTable();
   }
   getExpensesList() {
     return this.expenses_list;
@@ -94,10 +98,21 @@ class Account {
     this.expenses_list.pop(expense);
     this.balance += expense.value;
     updateMatrics();
+    updateExpensesTable();
   }
 }
 
 //Update Expenses Table
+function updateExpensesTable() {
+  const exp_list = account.getExpensesList();
+  const table_list = exp_list.map(exp => {
+    return `<tr>
+    <td>${exp.name}</td>
+    <td>${toCurrency(exp.value)}</td>
+    </tr>`;
+  });
+  exp_body.innerHTML = table_list.join('');
+}
 
 //Buttons Click Events
 const btn = document.querySelectorAll('input[type="submit"]');
@@ -120,7 +135,6 @@ function getValues(e) {
       expense_type_el.value,
       parseFloat(expense_value_el.value)
     );
-    updateMatrics();
   } else if (
     this.parentNode.parentNode.className == 'income' ||
     'budget' ||
